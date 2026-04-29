@@ -55,6 +55,13 @@ export default function Home() {
       setLoading(false);
     }
   }
+  const sortedHeadlines = analysis
+  ? [...analysis.headlines].sort((a, b) => {
+      if (a.score === 0 && b.score !== 0) return 1;
+      if (a.score !== 0 && b.score === 0) return -1;
+      return Math.abs(b.score) - Math.abs(a.score);
+    })
+  : [];
 
   return (
     <main className="min-h-screen bg-[#F8F6F1] text-[#171717] flex items-center justify-center px-6">
@@ -122,7 +129,7 @@ export default function Home() {
               </p>
 
               <ul className="space-y-3">
-                {analysis.headlines.map((headline, index) => (
+                {sortedHeadlines.map((headline, index) => (
                   <li key={index} className="border border-gray-100 p-4">
                     <a
                       href={headline.link}
