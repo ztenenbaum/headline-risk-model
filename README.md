@@ -21,3 +21,5 @@ Input a stock ticker (e.g. NVDA, TSLA), and the system:
 ---
 
 Ongoing work includes transitioning from rule-based NLP to deep learning models (e.g., FinBERT) to better capture context and improve sentiment accuracy.
+
+In the process of putting this on vercel for use.
