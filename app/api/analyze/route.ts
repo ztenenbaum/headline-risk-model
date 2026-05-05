@@ -124,7 +124,6 @@ const negativeKeywords: Record<string, number> = {
   slump: 9,
   warning: 8,
   cut: 7,
-  downgrade: 10,
 };
 
 const signalCategories: Record<string, string[]> = {
